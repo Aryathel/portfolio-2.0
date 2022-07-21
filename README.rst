@@ -8,9 +8,10 @@ progress, but I already feel *so* much better about this one than the last.
 Stack
 -----
 This project makes use of a variety of JavaScript based tools.
-- TypeScript
-- NodeJS
-- ReactJS
-- NextJS
-- ThreeJS
-- Chakra UI
+
+* `TypeScript <https://www.typescriptlang.org/>`_
+* `NodeJS <https://nodejs.dev/>`_
+* `ReactJS <https://reactjs.org/>`_
+* `NextJS <https://nextjs.org/>`_
+* `ThreeJS <https://threejs.org/>`_
+* `Chakra UI <https://chakra-ui.com/>`_
