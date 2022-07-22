@@ -6,6 +6,7 @@ import { GLTF, GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Dispatch } from "react";
 import { loadGLTFModel } from "../libs/model";
 import { Mesh, Material, Scene, AnimationClip } from "three";
+import { render } from "react-dom";
 
 function easeOutCirc(x) {
     return Math.sqrt(1 - Math.pow(x-1, 4));
@@ -43,10 +44,11 @@ const Logo3D = () => {
             renderer.setPixelRatio(window.devicePixelRatio);
             renderer.setSize(scW, scH);
             renderer.outputEncoding = THREE.sRGBEncoding;
+            renderer.domElement.style.zIndex = "1";
             if (container.childElementCount <= 1) container.appendChild(renderer.domElement);
             setRenderer(renderer);
 
-            const scale = scH * 0.001 + 1.6;
+            const scale = scH * 0.001 + 1.2;
             const camera = new THREE.OrthographicCamera(
                 -scale,
                 scale,
@@ -93,23 +95,9 @@ const Logo3D = () => {
                 receiveShadow: false,
                 castShadow: false
               }).then((obj: GLTF) => {
-                obj.scene.children.forEach( function (child: Mesh) {
-                    if (child.isMesh && child.material) {
-                        if (Array.isArray(child.material)) {
-                            child.material.forEach(function(material: Material) {
-                                material.opacity = 0.8;
-                                material.transparent = true;
-                            });
-                        } else {
-                            child.material.opacity = 0.8;
-                            child.material.transparent = true;
-                        }
-                    }
-
-                    mixer = new THREE.AnimationMixer(obj.scene);
-                    obj.animations.forEach((clip: AnimationClip) => {
-                        mixer.clipAction(clip).play();
-                    });
+                mixer = new THREE.AnimationMixer(obj.scene);
+                obj.animations.forEach((clip: AnimationClip) => {
+                    mixer.clipAction(clip).play();
                 });
               }).then(() => {
                 animate();
@@ -160,8 +148,8 @@ const Logo3D = () => {
           className="logo-3d"
           m="auto"
           mb={-20}
-          w={[40, 300]}
-          h={[40, 300]}
+          w={[40, 280]}
+          h={[40, 280]}
           position="relative"
         >
             {loading && (

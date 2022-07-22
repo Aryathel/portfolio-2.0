@@ -1,7 +1,6 @@
 import { ChakraProvider, GridItem } from "@chakra-ui/react";
 import Layout from "../components/layouts/main";
 import Fonts from "../components/fonts";
-import { GridItemStyle } from "../components/grid-item";
 import theme from "../libs/theme";
 import { AnimatePresence } from "framer-motion";
 import type { NextPage } from "next";

@@ -12,17 +12,19 @@ import {
     MenuList,
     MenuButton,
     IconButton,
-    useColorModeValue
+    useColorModeValue,
+    Icon
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import ThemeToggleButton from "./theme-toggle-button";
+import { SiGithub } from "react-icons/si";
 
 const LinkItem = ({ href, path, children }) => {
     const active = path === href;
     const inactiveColor = useColorModeValue('gray.500', 'whiteAlpha.900');
     return (
         <NextLink href={href}>
-            <Link p={2} bg={active ? 'glassTeal' : undefined} color={inactiveColor} fontWeight={active ? 800 : 100}>
+            <Link p={2} bg={active ? 'glassTeal' : "none"} color={inactiveColor} fontWeight={active ? 800 : 100} >
                 {children}
             </Link>
         </NextLink>
@@ -33,8 +35,8 @@ const NavBar = props => {
     const { path } = props;
 
     return (
-        <Box position="fixed" as="nav" w="100%" bg={useColorModeValue('#ffffff60', '#20202380')} style={{backdropFilter: 'blur(10px)'}} zIndex={1} {...props}>
-            <Container display="flex" p={2} maxW="container.md" style={{flexWrap: "wrap", textAlign: "center"}} justifyContent="space-between">
+        <Box position="fixed" top={0} as="nav" w="100%" bg={useColorModeValue('#ffffff60', '#20202380')} style={{backdropFilter: 'blur(10px)'}} zIndex={1} {...props}>
+            <Container display="flex" p={2} maxW="container.lg" style={{flexWrap: "wrap", textAlign: "center"}} justifyContent="space-between">
                 <Flex style={{textAlign: "center"}} mr={5}>
                     <Heading as="h1" size="lg" letterSpacing={'tighter'}>
                         <Logo />
@@ -47,24 +49,27 @@ const NavBar = props => {
                     <LinkItem href="/posts" path={path}>
                         Posts
                     </LinkItem>
+                    <Link href="https://github.com/Aryathel/portfolio-2.0" bg="none" color={useColorModeValue('gray.500', 'whiteAlpha.900')}>
+                        <Icon as={SiGithub} /> Source
+                    </Link>
                 </Stack>
 
-                <Box flex={1} style={{textAlign: 'right'}}>
+                <Box flex={1} h={10} style={{textAlign: 'right'}}>
                     <ThemeToggleButton />
                     <Box ml={2} display={{base: 'inline-block', md: 'none'}}>
                         <Menu>
                             <MenuButton as={IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="Options" />
                             <MenuList>
                                 <NextLink href="/" passHref>
-                                    <MenuItem as={Link}>Home</MenuItem>
+                                    <MenuItem as={Link} background="none">Home</MenuItem>
                                 </NextLink>
                                 <NextLink href="/projects" passHref>
-                                    <MenuItem as={Link}>Projects</MenuItem>
+                                    <MenuItem as={Link} background="none">Projects</MenuItem>
                                 </NextLink>
                                 <NextLink href="/posts" passHref>
-                                    <MenuItem as={Link}>Posts</MenuItem>
+                                    <MenuItem as={Link} background="none">Posts</MenuItem>
                                 </NextLink>
-                                <MenuItem as={Link} href="https://www.example.com">
+                                <MenuItem as={Link} background="none" href="https://github.com/Aryathel/portfolio-2.0">
                                     View Source
                                 </MenuItem>
                             </MenuList>

@@ -4,8 +4,8 @@ import { mode } from "@chakra-ui/theme-tools";
 const styles = {
     global: props => ({
         body: {
-            bg: mode('#f0e7db', '#202023')(props),
-            fontSize: "1.3rem"
+            bg: mode('#e3e3ff', '#202023')(props),
+            fontSize: ["1rem", "1.1rem", "1.3rem"],
         }
     })
 }
@@ -17,17 +17,31 @@ const components = {
                 textDecoration: 'underline',
                 fontSize: 20,
                 textUnderlineOffset: 6,
-                textDecorationColor: '#525252',
                 textDecorationThickness: 4,
                 marginTop: 3,
                 marginBottom: 4
+            },
+            'section-label': {
+                textDecoration: 'underline',
+                fontSize: 16,
+                textUnderlineOffset: 6,
+                textDecorationColor: '#525252',
+                textDecorationThickness: 2,
+                marginTop: 3,
+                marginBottom: 4,
             }
-        }
+        },
+        baseStyle: props => ({
+            scrollMarginTop: 20,
+        })
     },
     Link: {
         baseStyle: props => ({
-            color: mode('#3d7aed', '#ff63c3')(props),
+            color: mode('#f2ce76', '#ff63c3')(props),
             textUnderlineOffset: 3,
+            backgroundColor: 'rgba(96, 94, 169, 0.6)',
+            borderRadius: 4,
+            paddingX: 1
         })
     }
 }

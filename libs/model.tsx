@@ -10,7 +10,6 @@ export function loadGLTFModel(
         loader.load(
             glbPath,
             gltf => {
-                console.log(gltf);
                 const obj = gltf.scene;
                 obj.name = 'spinny_logo';
                 obj.position.y = 0;

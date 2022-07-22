@@ -5,6 +5,8 @@ import { Box, Container } from "@chakra-ui/react"
 import type { ReactElement } from "react";
 import type { PropsWithChildrenWithRouter } from "../../pages/_app";
 import Logo3D from '../3dlogo';
+import BackgroundWave from "../background-wave";
+import ParticleBackground from "../particle-background";
 
 const Main = ({ children, router }: PropsWithChildrenWithRouter): ReactElement => {
     return (
@@ -14,9 +16,11 @@ const Main = ({ children, router }: PropsWithChildrenWithRouter): ReactElement =
                 <title>Arya Mayfield | Homepage</title>
             </Head>
 
+            <ParticleBackground />
+            <BackgroundWave />
             <NavBar path={router.asPath} />
-
-            <Container maxW = "700px" pt={14}>
+            
+            <Container maxW = "container.lg" pt={14} mt="50px">
                 <NoSsr>
                     <Logo3D />
                 </NoSsr>

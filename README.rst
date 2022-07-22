@@ -15,3 +15,20 @@ This project makes use of a variety of JavaScript based tools.
 * `NextJS <https://nextjs.org/>`_
 * `ThreeJS <https://threejs.org/>`_
 * `Chakra UI <https://chakra-ui.com/>`_
+
+TODO
+----
+A list of planned features to add to the page, that it does not already have, but are thought out or already in development.
+
+* User login/authentication.
+* Blog post creation page, isolated to my personal account.
+* Ability for users to sign up for email or webhook notifications for a new blog post.
+
+Future Plans
+~~~~~~~~~~~~
+Plans that are just ideas for now, a little far away from actually getting worked on.
+
+* Get youtube videos and show them on a page (requires me to get back into making youtube content)
+* Notifications for those videos ^^
+* Ability to add project page directly from a github repo (requires some custom markdown processing for getting it to look nice)
+* Ability to add blog posts from a markdown file format instead of having to make its own ``.tsx`` file.

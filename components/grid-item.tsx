@@ -28,10 +28,10 @@ export const GridItem = ({ children, href, title, thumbnail = placeholderThumbna
 }
 
 interface ProjectGridItem {
-    children?: ReactElement;
+    children?: ReactElement | string;
     id: string;
     title: string;
-    thumbnail: string| StaticImageData;
+    thumbnail: string | StaticImageData;
 }
 export const ProjectGridItem = ({ children, id, title, thumbnail }: ProjectGridItem): ReactElement => {
     return (
