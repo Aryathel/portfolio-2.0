@@ -25,13 +25,12 @@ const components = {
                 textDecoration: 'underline',
                 fontSize: 16,
                 textUnderlineOffset: 6,
-                textDecorationColor: '#525252',
                 textDecorationThickness: 2,
                 marginTop: 3,
                 marginBottom: 4,
             }
         },
-        baseStyle: props => ({
+        baseStyle: () => ({
             scrollMarginTop: 20,
         })
     },

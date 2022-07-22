@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "components/3dlogo.tsx"  ],
+, "components/3dlogo.tsx", "server.js"  ],
   "exclude": [
     "node_modules"
   ]

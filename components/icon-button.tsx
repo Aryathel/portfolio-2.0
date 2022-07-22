@@ -4,11 +4,11 @@ import type { ReactElement } from "react";
 import type { IconType } from "react-icons";
 
 interface IconButton extends ButtonProps {
-    icon: IconType;
+    icon?: IconType;
 }
 export const IconButton = (props: IconButton): ReactElement => {
     return (
-        <Button leftIcon={<Icon as={props.icon} />} variant="ghost" colorScheme={useColorModeValue("pink", undefined)} {...props} />
+        <Button leftIcon={(props.icon && (<Icon as={props.icon} />))} variant="ghost" colorScheme={useColorModeValue("pink", undefined)} {...props} />
     );
 }
 
