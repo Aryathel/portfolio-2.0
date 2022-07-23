@@ -280,7 +280,7 @@ export default class Icons {
      */
      public static MinecraftButton ( props: ButtonProps ): ReactElement {
         return (
-            <Button px={Icons.defaultButtonPaddingX} h={Icons.defaultButtonHeight} {...props} leftIcon={<Icons.Minecraft h={Icons.defaultImageHeight} />}>
+            <Button px={Icons.defaultButtonPaddingX} h={Icons.defaultButtonHeight} {...props} leftIcon={<Icons.Minecraft h={Icons.defaultImageHeight} w="auto" />}>
                 {props.children ? props.children : "Minecraft"}
             </Button>
         );
@@ -306,7 +306,7 @@ export default class Icons {
      */
      public static TerrariaButton ( props: ButtonProps ): ReactElement {
         return (
-            <Button px={Icons.defaultButtonPaddingX} h={Icons.defaultButtonHeight} {...props} leftIcon={<Icons.Terraria h={Icons.defaultImageHeight} />}>
+            <Button px={Icons.defaultButtonPaddingX} h={Icons.defaultButtonHeight} {...props} leftIcon={<Icons.Terraria h={Icons.defaultImageHeight} w="auto" />}>
                 {props.children ? props.children : "Terraria"}
             </Button>
         );

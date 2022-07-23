@@ -27,12 +27,9 @@ interface LinkItem {
 }
 
 const LinkItem = ({ href, path, children }) => {
-    console.log(path);
-    console.log(href);
     let active: boolean;
     if (path.endsWith('/'))  active = path === href+'/';
     else active = path === href;
-    console.log(active);
     const inactiveColor = useColorModeValue('gray.500', 'whiteAlpha.900');
     return (
         <NextLink href={href}>

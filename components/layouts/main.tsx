@@ -19,12 +19,12 @@ const Main = ({ children, router }: PropsWithChildrenWithRouter): ReactElement =
                 <title>Arya Mayfield | Homepage</title>
             </Head>
             
-            <ParticleBackground />
+            { !isMobile && (<ParticleBackground />) }
             <BackgroundWave />
             <NavBar path={router.asPath} />
             
             <Container maxW = "container.lg" pt={14} mt="50px">
-                { isMobile ? undefined : <NoSsr><Logo3D /></NoSsr> }
+                { !isMobile && (<NoSsr><Logo3D /></NoSsr>) }
                 {children}
             </Container>
         </Box>
