@@ -1,9 +1,6 @@
 import { Image, useColorModeValue } from "@chakra-ui/react";
-import { useRef } from "react";
 
 const BackgroundWave = () => {
-    const refContainer = useRef();
-
     return (
         <Image
           src="/images/background-wave.svg"

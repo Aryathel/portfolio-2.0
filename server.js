@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const { createServer } = require("http");
 const next = require("next");
+/* eslint-enable @typescript-eslint/no-var-requires */
 
 const isDevMode = process.env.NODE_ENV !== 'production';
 const port = process.env.PORT ? process.env.PORT : 3000;

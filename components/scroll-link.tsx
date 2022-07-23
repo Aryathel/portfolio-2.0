@@ -12,7 +12,7 @@ const ScrollLink = ({ children, href }: ScrollLink) => {
         console.log("caught click");
 
         if (href.startsWith("#")) href = href.replace('#', '');
-        let target = document.getElementById(href);
+        const target = document.getElementById(href);
         console.log(target);
         
         if (target) {

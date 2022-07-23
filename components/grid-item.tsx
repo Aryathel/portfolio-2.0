@@ -13,6 +13,7 @@ interface GridItem {
     title: string;
     thumbnail?: string| StaticImageData;
 }
+/* eslint-disable @typescript-eslint/no-unused-vars */
 export const GridItem = ({ children, href, title, thumbnail = placeholderThumbnail }: GridItem): ReactElement => {
     return (
         <Box w="100%" style={{justifyContent: "center"}}>
@@ -50,6 +51,7 @@ export const ProjectGridItem = ({ children, id, title, thumbnail }: ProjectGridI
         </Box>
     )
 }
+/* eslint-enable @typescript-eslint/no-unused-vars */
 
 export const GridItemStyle = (): ReactElement => {
     return (

@@ -1,10 +1,7 @@
 import Particles from "react-tsparticles";
 import { loadFull } from "tsParticles";
-import type { Engine, ISourceOptions, Container } from "tsparticles-engine";
+import type { Engine, ISourceOptions } from "tsparticles-engine";
 import { ReactElement, useRef } from "react";
-import { Box } from "@chakra-ui/react";
-import ThemeToggleButton from "./theme-toggle-button";
-import BackgroundWave from "./background-wave";
 
 
 const ParticleBackground = (): ReactElement => {

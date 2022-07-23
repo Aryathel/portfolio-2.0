@@ -2,11 +2,10 @@ import { useState, useEffect, useRef, useCallback, MutableRefObject, SetStateAct
 import { Box, Spinner } from "@chakra-ui/react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { GLTF, GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { GLTF } from "three/examples/jsm/loaders/GLTFLoader";
 import { Dispatch } from "react";
 import { loadGLTFModel } from "../libs/model";
-import { Mesh, Material, Scene, AnimationClip } from "three";
-import { render } from "react-dom";
+import { AnimationClip } from "three";
 
 function easeOutCirc(x) {
     return Math.sqrt(1 - Math.pow(x-1, 4));
@@ -87,9 +86,8 @@ const Logo3D = () => {
             controls.target = target;
             setControls(controls);
 
-            const loader = new GLTFLoader();
             const clock = new THREE.Clock();
-            var mixer: THREE.AnimationMixer;
+            let mixer: THREE.AnimationMixer;
 
             loadGLTFModel(scene, '/3d/LogoSpinnyThingy.glb', {
                 receiveShadow: false,
@@ -110,7 +108,7 @@ const Logo3D = () => {
                 req = requestAnimationFrame(animate);
                 frame = frame <= 100 ? frame + 1 : frame;
 
-                var delta = clock.getDelta();
+                const delta = clock.getDelta();
                 if (mixer) mixer.update(delta);
 
                 if (frame <= 100) {

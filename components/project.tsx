@@ -23,6 +23,7 @@ interface ProjectImage {
     alt: string;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const ProjectImage = ({ src, alt }: ProjectImage) => {
     return (
         <Image borderRadius="lg" w="full" src={src} alt={alt} mb={4} />
