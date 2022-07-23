@@ -1,5 +1,5 @@
 import Particles from "react-tsparticles";
-import { loadFull } from "tsParticles";
+import { loadFull } from "tsparticles";
 import type { Engine, ISourceOptions } from "tsparticles-engine";
 import { ReactElement, useRef } from "react";
 
