@@ -1,5 +1,5 @@
-import { Icon, Button, Box, Image } from "@chakra-ui/react";
-import type { IconProps, ButtonProps, BoxProps } from "@chakra-ui/react";
+import { Icon, Button, Image } from "@chakra-ui/react";
+import type { IconProps, ButtonProps, ImageProps } from "@chakra-ui/react";
 import type { ReactElement } from "react";
 
 const MinecraftLogo = "/images/minecraft.png";
@@ -265,11 +265,9 @@ export default class Icons {
     * @param props The props to pass into the component for a specific instance.
     * @returns The configured react component.
     */
-    public static Minecraft (props: BoxProps): ReactElement {
+    public static Minecraft (props: ImageProps): ReactElement {
         return (
-            <Box display="flex" {...props}>
-                <Image src={MinecraftLogo} alt="Minecraft Logo"/>
-            </Box>
+            <Image {...props} src={MinecraftLogo} alt="Minecraft Logo"/>
         );
     }
 
@@ -280,7 +278,7 @@ export default class Icons {
      */
      public static MinecraftButton ( props: ButtonProps ): ReactElement {
         return (
-            <Button px={Icons.defaultButtonPaddingX} h={Icons.defaultButtonHeight} {...props} leftIcon={<Icons.Minecraft h={Icons.defaultImageHeight} w="auto" />}>
+            <Button px={Icons.defaultButtonPaddingX} h={Icons.defaultButtonHeight} {...props} leftIcon={<Icons.Minecraft h={Icons.defaultImageHeight} />}>
                 {props.children ? props.children : "Minecraft"}
             </Button>
         );
@@ -291,11 +289,9 @@ export default class Icons {
     * @param props The props to pass into the component for a specific instance.
     * @returns The configured react component.
     */
-     public static Terraria (props: BoxProps): ReactElement {
+     public static Terraria (props: ImageProps): ReactElement {
         return (
-            <Box display="flex" {...props}>
-                <Image src={TerrariaLogo}  alt="Terraria Logo"/>
-            </Box>
+            <Image {...props} src={TerrariaLogo} alt="Minecraft Logo"/>
         );
     }
 
@@ -306,7 +302,7 @@ export default class Icons {
      */
      public static TerrariaButton ( props: ButtonProps ): ReactElement {
         return (
-            <Button px={Icons.defaultButtonPaddingX} h={Icons.defaultButtonHeight} {...props} leftIcon={<Icons.Terraria h={Icons.defaultImageHeight} w="auto" />}>
+            <Button px={Icons.defaultButtonPaddingX} h={Icons.defaultButtonHeight} {...props} leftIcon={<Icons.Terraria h={Icons.defaultImageHeight} />}>
                 {props.children ? props.children : "Terraria"}
             </Button>
         );
