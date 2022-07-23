@@ -15,7 +15,7 @@ const ParticleBackground = (): ReactElement => {
         preset: "links",
         fpsLimit: 60,
         pauseOnBlur: true,
-        pauseOnOutsideViewport: true,
+        pauseOnOutsideViewport: false,
         style: {
             position: "fixed",
             top: "0",

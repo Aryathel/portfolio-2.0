@@ -12,6 +12,7 @@ const Main = ({ children, router }: PropsWithChildrenWithRouter): ReactElement =
     return (
         <Box as="main" pb={8}>
             <Head>
+                <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>Arya Mayfield | Homepage</title>
             </Head>
