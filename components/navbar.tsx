@@ -18,9 +18,21 @@ import {
 import { HamburgerIcon } from "@chakra-ui/icons";
 import ThemeToggleButton from "./theme-toggle-button";
 import { SiGithub } from "react-icons/si";
+import type { ReactNode } from "react";
+
+interface LinkItem {
+    href: string;
+    path: string;
+    children: ReactNode
+}
 
 const LinkItem = ({ href, path, children }) => {
-    const active = path === href;
+    console.log(path);
+    console.log(href);
+    let active: boolean;
+    if (path.endsWith('/'))  active = path === href+'/';
+    else active = path === href;
+    console.log(active);
     const inactiveColor = useColorModeValue('gray.500', 'whiteAlpha.900');
     return (
         <NextLink href={href}>

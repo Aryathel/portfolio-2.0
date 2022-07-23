@@ -54,7 +54,7 @@ const Logo3D = () => {
                 scale,
                 -scale,
                 0.01,
-                50000
+                102
             );
             camera.position.copy(initialCameraPosition);
             camera.lookAt(target);
