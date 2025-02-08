@@ -37,8 +37,8 @@ const Page = (): ReactElement => {
                         About Me
                     </Heading>
                     <Paragraph style={{marginBottom: 4}}>
-                        I am a 21-year old software engineer who was born and raised in Phoenix, Arizona. I have been pursing programming as a hobby for more than 6 years, and I have been
-                        professionally writing code for over 3 years. I have primarily worked in Python, but have a significant variety of experience in other languages as well (see 
+                        I am a 24-year old software engineer who was born and raised in Phoenix, Arizona. I have been pursing programming as a hobby for more than 6 years, and I have been
+                        professionally writing code for over 5 years. I have primarily worked in C# and Python, but have a significant variety of experience in other languages as well (see 
                         the <ScrollLink href="#skills-and-experience">Skills & Experience</ScrollLink> section below). I have always enjoyed the thrill have being able to constantly push 
                         myself to learn new things and tackle new challenges and projects.
                     </Paragraph>
@@ -55,9 +55,9 @@ const Page = (): ReactElement => {
                     </Paragraph>
                     <Paragraph>
                         As a final note to the introduction of, well.. me, I would be remiss if I did not talk about my identity. I am a proud <Icons.TransgenderFlagButton>transgender</Icons.TransgenderFlagButton> woman,
-                        I am very proud of how far I have come on this journey, and I am looking forward to what the road holds ahead. I will always support my LGBTQ+ family. If anyone who reads this ever wants to chat, 
-                        don't be afraid to send me a message on <ScrollLink href="#discord">Discord</ScrollLink> or <ScrollLink href="#twitter">Twitter</ScrollLink>. I am almost always online over there, especially on Discord.
+                        I am very proud of how far I have come on this journey, and I am looking forward to what the road holds ahead.
                     </Paragraph>
+		<!--
                     <Box my={4} display="flex">
                         <NextLink href="/projects">
                             <Button rightIcon={<ChevronRightIcon />} m="auto" colorScheme="teal">
@@ -65,6 +65,7 @@ const Page = (): ReactElement => {
                             </Button>
                         </NextLink>
                     </Box>
+		-->
                 </Section>
                 <Section delay={0.2}>
                     <Heading as="h3" variant="section-title">
@@ -100,9 +101,14 @@ const Page = (): ReactElement => {
                         Worked on the <Link href="https://battlefy.com/msi-student/msi-student-radiant-cup-spring-split-2/603ac347f9963411ea68f10e/info?infoTab=details" target="_blank">MSI Student Radiant Cup Valorant</Link> tournament as a graphics operator on the broadcast team.
                     </BioSection>
                     <BioSection>
-                        <BioYear>August 2021 - Present</BioYear>
+                        <BioYear>August 2021 - May 2022</BioYear>
                         Unity Game Developer for the <Link href="https://ischool.arizona.edu/xrg-lab" target="_blank">Extended Reality and Games Lab</Link> at the University of Arizona, partnering with the Department of Veterans Affairs to research the viability of a virtual reality
                         game being used as a clinical treatment for cognitive impairment.
+                    </BioSection>
+                    <BioSection>
+                        <BioYear>September 2022 - Present</BioYear>
+                        Software Engineer for <Link href="https://www.oppc.com/" target="_blank">OnePoint Patient Care</Link> on their integrations team. Built varied healthcare data integrations, applications, and solutions across a variety of areas of the business.
+                        This includes full development cycle work, from planning, designing & architecting, proof-of-concepts, development, deployment, post-deployment support, and maintenance.
                     </BioSection>
                 </Section>
 
@@ -648,23 +654,13 @@ const Page = (): ReactElement => {
                             </IconButtonLink>
                         </ListItem>
                         <ListItem id="discord">
-                            <IconButtonLink href="https://discord.gg/SuEq5fT9de" colorScheme="teal" icon={SiDiscord} fontSize={18} fontWeight={400}>
+                            <IconButtonLink colorScheme="teal" icon={SiDiscord} fontSize={18} fontWeight={400}>
                                 Aryathel#0310
                             </IconButtonLink>
                         </ListItem>
                         <ListItem>
                             <IconButtonLink href="https://www.linkedin.com/in/arya-mayfield-00a99719b/" colorScheme="teal" icon={SiLinkedin} fontSize={18} fontWeight={400}>
                                 Arya Mayfield
-                            </IconButtonLink>
-                        </ListItem>
-                        <ListItem id="twitter">
-                            <IconButtonLink href="https://twitter.com/Aryathel" colorScheme="teal" icon={SiTwitter} fontSize={18} fontWeight={400}>
-                                @Aryathel
-                            </IconButtonLink>
-                        </ListItem>
-                        <ListItem>
-                            <IconButtonLink href="https://twitch.tv/Aryathel" colorScheme="teal" icon={SiTwitch} fontSize={18} fontWeight={400}>
-                                Aryathel
                             </IconButtonLink>
                         </ListItem>
                     </List>
