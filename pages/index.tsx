@@ -57,7 +57,6 @@ const Page = (): ReactElement => {
                         As a final note to the introduction of, well.. me, I would be remiss if I did not talk about my identity. I am a proud <Icons.TransgenderFlagButton>transgender</Icons.TransgenderFlagButton> woman,
                         I am very proud of how far I have come on this journey, and I am looking forward to what the road holds ahead.
                     </Paragraph>
-		<!--
                     <Box my={4} display="flex">
                         <NextLink href="/projects">
                             <Button rightIcon={<ChevronRightIcon />} m="auto" colorScheme="teal">
@@ -65,7 +64,6 @@ const Page = (): ReactElement => {
                             </Button>
                         </NextLink>
                     </Box>
-		-->
                 </Section>
                 <Section delay={0.2}>
                     <Heading as="h3" variant="section-title">
