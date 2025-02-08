@@ -652,7 +652,7 @@ const Page = (): ReactElement => {
                             </IconButtonLink>
                         </ListItem>
                         <ListItem id="discord">
-                            <IconButtonLink colorScheme="teal" icon={SiDiscord} fontSize={18} fontWeight={400}>
+                            <IconButtonLink href="#" colorScheme="teal" icon={SiDiscord} fontSize={18} fontWeight={400}>
                                 Aryathel#0310
                             </IconButtonLink>
                         </ListItem>
