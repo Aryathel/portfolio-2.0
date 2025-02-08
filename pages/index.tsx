@@ -37,8 +37,8 @@ const Page = (): ReactElement => {
                         About Me
                     </Heading>
                     <Paragraph style={{marginBottom: 4}}>
-                        I am a 24-year old software engineer who was born and raised in Phoenix, Arizona. I have been pursing programming as a hobby for more than 6 years, and I have been
-                        professionally writing code for over 5 years. I have primarily worked in C# and Python, but have a significant variety of experience in other languages as well (see 
+                        I am a 24-year old software engineer who was born and raised in Phoenix, Arizona. I have been pursing programming as a hobby since 2015, and I have been
+                        professionally writing code since 2019. I have primarily worked in C# and Python, but have a significant variety of experience in other languages as well (see 
                         the <ScrollLink href="#skills-and-experience">Skills & Experience</ScrollLink> section below). I have always enjoyed the thrill have being able to constantly push 
                         myself to learn new things and tackle new challenges and projects.
                     </Paragraph>
@@ -652,7 +652,7 @@ const Page = (): ReactElement => {
                             </IconButtonLink>
                         </ListItem>
                         <ListItem id="discord">
-                            <IconButtonLink href="#" colorScheme="teal" icon={SiDiscord} fontSize={18} fontWeight={400}>
+                            <IconButtonLink href="#" external={false} colorScheme="teal" icon={SiDiscord} fontSize={18} fontWeight={400}>
                                 Aryathel#0310
                             </IconButtonLink>
                         </ListItem>

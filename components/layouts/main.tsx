@@ -17,6 +17,14 @@ const Main = ({ children, router }: PropsWithChildrenWithRouter): ReactElement =
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>Arya Mayfield | Homepage</title>
+                <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+                <meta property="og:title" content="About Arya" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://arya-portfolio.vercel.app/" />
+                <meta property="og:image" content="https://arya-portfolio.vercel.app/images/arya.jpg" />
+                <meta property="og:description" content="A basic 'About Me' portfolio site." />
+                <meta name="theme-color" content="#5B4698" />
             </Head>
             
             { !isMobile && (<ParticleBackground />) }
